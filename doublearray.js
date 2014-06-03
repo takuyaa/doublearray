@@ -289,7 +289,7 @@
         var start_pos = start;
         for (; next_pos < start + length; next_pos++) {
             var next_char = this.keys[next_pos].k[position];
-            if (current_char != next_char) {
+            if (current_char !== next_char) {
                 children_info[i++] = next_pos - start_pos;  // length (current)
 
                 children_info[i++] = next_char;             // char (next)
@@ -760,7 +760,7 @@
         }
     };
 
-    if ("undefined" == typeof module) {
+    if ("undefined" === typeof module) {
 	    // In browser
         window.doublearray = doublearray;
     } else {
