@@ -343,9 +343,8 @@
 
             // Update record
             if (code === TERM_CODE) {
-                // TODO set record
                 var start_pos = children_info[i + 1];
-                var len = children_info[i + 2];
+                // var len = children_info[i + 2];
                 // if (len != 1) {
                 //     throw 'assertion error: there are multiple terminal nodes. len:' + len;
                 // }
@@ -389,9 +388,8 @@
             _base = curr - children_info[0];
 
             if (_base < 0) {
-                // next
-                var _curr = curr;
-                curr = - bc.getCheck(curr);
+                curr = - bc.getCheck(curr);  // next
+
                 // if (curr < 0) {
                 //     throw 'assertion error: getCheck returns negative value'
                 // }
@@ -429,7 +427,6 @@
     DoubleArrayBuilder.prototype.isUnusedNode = function (index) {
         var bc = this.bc;
         var check = bc.getCheck(index);
-        var base = bc.getBase(index);
 
         // if (index < 0) {
         //     throw 'assertion error: isUnusedNode index:' + index;
@@ -479,7 +476,6 @@
 
             child = this.traverse(parent, code);
             if (child === NOT_FOUND) {
-                var base = bc.getBase(parent);
                 return false;
             }
 
