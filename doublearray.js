@@ -12,7 +12,7 @@
     var CHECK_SIGNED = true;
     var BASE_BYTES = 4;
     var CHECK_BYTES = 4;
-    var MEMORY_EXPAND_RATIO = 2;
+    var MEMORY_EXPAND_SIZE = 1024;
 
 
     var newBC = function(initial_size) {
@@ -42,7 +42,7 @@
 
         var realloc = function(min_size) {
             // expand arrays size by given ratio
-            var new_size = min_size * MEMORY_EXPAND_RATIO;
+            var new_size = min_size + MEMORY_EXPAND_SIZE;
             // console.log('re-allocate memory to ' + new_size);
 
             var base_new_array = newArrayBuffer(base.signed, base.bytes, new_size);
