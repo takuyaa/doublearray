@@ -25,7 +25,7 @@
             for (var i = start; i < end; i++) {
                 _base[i] = - i + 1;  // inversed previous empty node index
             }
-            if (0 < check.array[check.array.length]) {
+            if (0 < check.array[check.array.length - 1]) {
                 var last_id = check.array.length - 2;
                 while (0 < check.array[last_id]) {
                     last_id--;
