@@ -26,11 +26,11 @@
                 _base[i] = - i + 1;  // inversed previous empty node index
             }
             if (0 < check.array[check.array.length - 1]) {
-                var last_id = check.array.length - 2;
-                while (0 < check.array[last_id]) {
-                    last_id--;
+                var last_used_id = check.array.length - 2;
+                while (0 < check.array[last_used_id]) {
+                    last_used_id--;
                 }
-                _base[start] = last_id;
+                _base[start] = - last_used_id;
             }
         };
 
