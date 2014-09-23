@@ -83,8 +83,20 @@
         initCheck(check.array, ROOT_ID + 1, check.array.length);
 
         return {
-            base: base.array,
-            check: check.array,
+            getBaseBuffer: function () {
+                return base.array;
+            },
+            getCheckBuffer: function () {
+                return check.array;
+            },
+            loadBaseBuffer: function (base_buffer) {
+                base.array = base_buffer;
+                return this;
+            },
+            loadCheckBuffer: function (check_buffer) {
+                check.array = check_buffer;
+                return this;
+            },
             size: function () {
                 return Math.max(base.array.length, check.array.length);
             },
@@ -759,6 +771,12 @@
     var doublearray = {
         builder: function (initial_size) {
             return new DoubleArrayBuilder(initial_size);
+        },
+        load: function (base_buffer, check_buffer) {
+            var bc = newBC(0);
+            bc.loadBaseBuffer(base_buffer);
+            bc.loadCheckBuffer(check_buffer);
+            return new DoubleArray(bc);
         }
     };
 

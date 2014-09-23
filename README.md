@@ -60,6 +60,18 @@ Method chaining
     //      { v: 5, k: '奈良先端科学技術大学院大学' } ]
 
 
+### Load
+
+Get BASE or CHECK buffer as Int32Array of typed array
+
+    var base_buffer = trie.bc.getBaseBuffer();
+    var check_buffer = trie.bc.getCheckBuffer();
+
+Load and create a new DoubleArray object from original buffers
+
+    var loaded_trie = doublearray.load(base_buffer, check_buffer);
+
+
 Copyright and license
 ---------------------
 
