@@ -83,6 +83,8 @@
         initCheck(check.array, ROOT_ID + 1, check.array.length);
 
         return {
+            base: base.array,
+            check: check.array,
             size: function () {
                 return Math.max(base.array.length, check.array.length);
             },
