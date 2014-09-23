@@ -190,7 +190,7 @@
 
     /**
      * Append a key to initialize set
-     * (This method should be called by dictinary ordered key)
+     * (This method should be called by dictionary ordered key)
      *
      * @param {String} key
      * @param {Number} value Integer value from 0 to max signed integer number - 1
@@ -256,7 +256,7 @@
     };
 
     /**
-     * Appned nodes to BASE and CHECK array recursively
+     * Append nodes to BASE and CHECK array recursively
      */
     DoubleArrayBuilder.prototype._build = function (parent_index, position, start, length) {
 
