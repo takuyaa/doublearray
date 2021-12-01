@@ -551,6 +551,10 @@
 
         var buffer = stringToUtf8Bytes(key);
 
+        if (buffer === null) {
+          return []
+        }
+
         var parent = ROOT_ID;
         var child = NOT_FOUND;
 
