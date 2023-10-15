@@ -1,40 +1,24 @@
 # Logs
 logs
 *.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
 
-# Runtime data
-pids
-*.pid
-*.seed
-
-# Coverage directory used by tools like istanbul
-coverage
-
-# Dependency directory
-# Commenting this out is preferred by some people, see
-# https://www.npmjs.org/doc/misc/npm-faq.html#should-i-check-my-node_modules-folder-into-git-
 node_modules
-bower_components
-components
+dist
+dist-ssr
+*.local
 
-# Users Environment Variables
-.lock-wscript
-
-# Compiled Node.js modules
-*.node
-
-# IntelliJ
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
 .idea
-*.iml
-
-# Build system
-build
-gulp.1
-.grunt
-
-# Others
 .DS_Store
-*.orig
-sandbox
-test/out-fixtures/*
-test/watch-*.txt
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
